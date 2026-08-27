@@ -1,0 +1,8 @@
+langgraph
+langsmith
+langchain
+boto3
+fastapi
+uvicorn
+openai
+faiss-cpu
