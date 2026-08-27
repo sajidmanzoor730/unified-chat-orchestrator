@@ -23,9 +23,6 @@ Python, LangGraph, LangSmith, Vertex AI, AWS Bedrock, FastAPI, FAISS
 pip install -r requirements.txt
 python main.py
 
-## Links
-- Portfolio: Built as part of Coinbase ML Engineer application
-- 
 ## Demo
 ```python
 # Intent -> Vendor AI -> Internal -> Human fallback
@@ -33,3 +30,5 @@ graph = StateGraph(State)
 graph.add_node("router", intent_router)
 graph.add_node("bedrock", bedrock_agent)
 graph.add_node("vertex", vertex_agent)
+graph.add_edge("router", "bedrock")
+graph.add_edge("bedrock", "vertex")
