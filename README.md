@@ -25,3 +25,11 @@ python main.py
 
 ## Links
 - Portfolio: Built as part of Coinbase ML Engineer application
+- 
+## Demo
+```python
+# Intent -> Vendor AI -> Internal -> Human fallback
+graph = StateGraph(State)
+graph.add_node("router", intent_router)
+graph.add_node("bedrock", bedrock_agent)
+graph.add_node("vertex", vertex_agent)
